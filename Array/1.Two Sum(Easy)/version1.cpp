@@ -24,11 +24,11 @@ public:
 };
 
 int main(){
-    vector<int> nums{3,2,4};
+    vector<int> nums{3,2,4,2};
     int target = 6;
     Solution s;
     vector<int> result = s.twoSum(nums,target);
     for(auto i:result){
-        cout<<i;
+        cout<<i<<",";
     }
 }

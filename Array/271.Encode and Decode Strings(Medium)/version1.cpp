@@ -5,7 +5,7 @@
 using namespace std;
 class Solution {
 public:
-
+    // 每個string元素都加上 "字串長度" + "#" 區隔 
     string encode(vector<string>& strs) {
         string res = "";
         for(int i = 0;i < strs.size();i++){
@@ -14,6 +14,7 @@ public:
         return res;
     }
 
+    // 以"#" limiter 區隔每個字串元素
     vector<string> decode(string s) {
         vector<string> res;
         int i = 0;
