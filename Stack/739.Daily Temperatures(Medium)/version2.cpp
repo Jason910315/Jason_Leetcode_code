@@ -15,9 +15,11 @@ public:
         for(int i = n-1;i >= 0;i--){
             int t = temperatures[i];
             // 向左遍歷遇到更高溫度，將stack裡更低溫的下標通通刪除
+            // step1: 更新最大值元素
             while(!st.empty() && t >= temperatures[st.top()]){
                 st.pop();
             }
+            // step2: 更新經過天數
             if(!st.empty()){
                 ans[i] = st.top() - i;
             }
