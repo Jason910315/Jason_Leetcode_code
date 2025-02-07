@@ -32,6 +32,6 @@ int main(){
     string str = "{{[()]}()}}";
     Solution s;
     bool valid = s.isValid(str);
-    string ans = valid == 1 ?"Valid":"Not Vald";
+    string ans = valid == 1 ?"Valid":"Not Valid";
     cout<<ans;
 }
