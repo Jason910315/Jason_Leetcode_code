@@ -5,24 +5,24 @@ using namespace std;
 
 class Solution {
 public:
-int maxDistance(vector<int>& nums1, vector<int>& nums2) {
-    int i = 0,j = 0;
-    int n = nums1.size(), m = nums2.size();
-    int maxDis = 0;
-    while(i < n && j < m){
-        if(nums1[i] > nums2[j]){
-            if(i == j){
+    int maxDistance(vector<int>& nums1, vector<int>& nums2) {
+        int i = 0,j = 0;
+        int n = nums1.size(), m = nums2.size();
+        int maxDis = 0;
+        while(i < n && j < m){
+            if(nums1[i] > nums2[j]){
+                if(i == j){
+                    j++;
+                }
+                i++;
+            }
+            else{
+                maxDis = max(maxDis,j - i);
                 j++;
             }
-            i++;
         }
-        else{
-            maxDis = max(maxDis,j - i);
-            j++;
-        }
+        return maxDis;
     }
-    return maxDis;
-}
 };
 
 int main(){
