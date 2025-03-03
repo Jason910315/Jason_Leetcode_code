@@ -1,0 +1,1 @@
+sum += floor(sqrt(mid / r));
